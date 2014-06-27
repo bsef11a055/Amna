@@ -1,0 +1,158 @@
+﻿<!DOCTYPE html>
+<html>
+
+
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+   
+    @ViewBag.Title
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Web Store Theme - Free CSS Templates</title>
+<meta name="keywords" content="web store, free templates, website templates, CSS, HTML" />
+<meta name="description" content="Web Store Theme - free CSS template provided by templatemo.com" />
+<link href="~/Content/templatemo_style.css" rel="stylesheet" type="text/css" />
+
+<link rel="stylesheet" type="text/css" href="~/Content/ddsmoothmenu.css" />
+
+<script type="text/javascript" src="~/Scripts/jquery.min.js"></script>
+<script type="text/javascript" src="~/Scripts/ddsmoothmenu.js">
+
+/***********************************************
+* Smooth Navigational Menu- (c) Dynamic Drive DHTML code library (www.dynamicdrive.com)
+* This notice MUST stay intact for legal use
+* Visit Dynamic Drive at http://www.dynamicdrive.com/ for full source code
+***********************************************/
+
+</script>
+
+<script type="text/javascript">
+
+ddsmoothmenu.init({
+	mainmenuid: "templatemo_menu", //menu DIV id
+	orientation: 'h', //Horizontal or vertical menu: Set to "h" or "v"
+	classname: 'ddsmoothmenu', //class added to menu's outer DIV
+	//customtheme: ["#1c5a80", "#18374a"],
+	contentsource: "markup" //"markup" or ["container_id", "path_to_menu_file"]
+})
+
+</script>
+
+<link rel="stylesheet" type="text/css" href="~/Content/styles.css" />
+<script  type="text/javascript" src="~/Scripts/mootools-1.2.1-core.js"></script>
+<script type="text/javascript" src="~/Scripts/mootools-1.2-more.js"></script>
+<script  type="text/javascript" src="~/Scripts/slideitmoo-1.1.js"></script>
+<script  type="text/javascript">
+	window.addEvents({
+		'domready': function(){
+			/* thumbnails example , div containers */
+			new SlideItMoo({
+						overallContainer: 'SlideItMoo_outer',
+						elementScrolled: 'SlideItMoo_inner',
+						thumbsContainer: 'SlideItMoo_items',		
+						itemsVisible: 5,
+						elemsSlide: 2,
+						duration: 200,
+						itemsSelector: '.SlideItMoo_element',
+						itemWidth: 171,
+						showControls:1});
+		},
+		
+	});
+
+	function clearText(field)
+	{
+		if (field.defaultValue == field.value) field.value = '';
+		else if (field.value == '') field.value = field.defaultValue;
+	}
+</script>
+
+
+
+</head>
+
+
+
+<body>
+
+
+    <div id="templatemo_wrapper">
+    <div id="templatemo_header" aria-orientation="horizontal">
+    	<div id="site_title">
+            <h1><a href="/Home/index">Online Garments Store</a></h1></div>
+        <div id="header_right">
+            <ul id="language">
+                <li><a><img src="~/images/usa.png" alt="English" /></a></li>
+                <li><a><img src="~/images/china.png" alt="Chinese" /></a></li>
+                <li><a><img src="~/images/germany.png" alt="Germany" /></a></li>
+                <li><a><img src="~/images/india.png" alt="Indian" /></a></li>
+            </ul>
+            <div class="cleaner"></div>
+            <div id="templatemo_search">
+
+                
+                <form action="#" method="get">
+                     
+                  <input type="text" value="Search" name="keyword" id="keyword" title="keyword" onfocus="clearText(this)" onblur="clearText(this)" class="txt_field" />
+                  <input type="submit" name="Search" value="" alt="Search" id="searchbutton" title="Search" class="sub_btn"  />
+                </form>
+            </div>
+         </div> <!-- END -->
+    </div> <!-- END of header -->
+
+
+   <div class="menu"> 
+    <div id="templatemo_menu" class="ddsmoothmenu">
+        <ul>
+            <li><a href="index.html" class="selected">Home</a></li>
+            <li><a href="products.html">Products</a>
+                <ul>
+                    <li><a href="#">Ladies</a></li>
+                    <li><a href="/Home/Geans">Gents</a></li>
+                    <li><a href="#">Kids</a></li>
+              </ul>
+            </li>
+            <li><a href="about.html">About</a>
+                <ul>
+                    <li><a href="#">Winter</a></li>
+                    <li><a href="#">Summer</a></li>
+                    <li><a href="#">Autumn</a></li>
+                    <li><a href="#">Spring</a></li>
+                    <li><a href="#">snowfall</a></li>
+              </ul>
+            </li>
+            <li><a href="/User/userLogin">Login</a></li>
+             <li><a href="/User/userSignup">SigUpn</a></li>
+            <li><a href="#">FAQs</a></li>
+            <li><a href="/Home/checkout">Checkout</a></li>
+            <li><a href="/Home/contact">Contact</a></li>
+        </ul>
+        <br style="clear: left" />
+    </div> <!-- end of templatemo_menu -->
+
+      
+       
+    
+       </div>
+    <div>
+        
+  
+
+    </div>
+
+
+        </div>
+    @RenderBody()
+
+    @Scripts.Render("~/bundles/jquery")
+    @RenderSection("scripts", required: false)
+</body>
+
+
+
+</html>
